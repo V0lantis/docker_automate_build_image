@@ -1,5 +1,12 @@
 name: GitHub Actions Demo
-on: [push]
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *' # everyday at 6am
+  push:
+    branches:
+      - '*'
+
 jobs:
   Build-scipy-with-NumPy-Nightly-release:
     runs-on: ubuntu-latest
