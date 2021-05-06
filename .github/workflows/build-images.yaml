@@ -32,6 +32,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: actions/checkout@v2
-      - run: docker build -t scipy-latest-commit scipy_w_numpy_last_commit
-      - run: docker tag scipy-latest-commit v0lantis/scipy-latest-commit
-      - run: docker push v0lantis/scipy-latest-commit
+      - run: docker build -t scipy-latest-numpy-commit scipy_w_numpy_last_commit
+      - run: docker tag scipy-latest-numpy-commit v0lantis/scipy-latest-numpy-commit
+      - run: docker push v0lantis/scipy-latest-numpy-commit
