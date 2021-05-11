@@ -14,3 +14,5 @@ RUN git clone https://github.com/numpy/numpy.git && pip install numpy && rm -rf 
     && python3.9 -m pip install --user setuptools wheel cython pytest pybind11 pytest-xdist pythran
 
 RUN git clone https://github.com/scipy/scipy.git && cd scipy && pip install -e .
+
+RUN pip install -r mypy_requirements.txt && python3.9 -u runtests.py --mypy 
