@@ -15,4 +15,6 @@ RUN git clone https://github.com/numpy/numpy.git && pip install numpy && rm -rf 
 
 RUN git clone https://github.com/scipy/scipy.git && cd scipy && pip install -e .
 
+WORKDIR scipy
+
 RUN pip install -r mypy_requirements.txt && python3.9 -u runtests.py --mypy 
